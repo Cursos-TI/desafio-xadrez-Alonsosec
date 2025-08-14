@@ -28,6 +28,7 @@
 
         int casasRainha = 8;  // Número de casas que a rainha vai se mover
         int contadorRainha = 1;
+        
         printf("Movimento da Rainha:\n");
 
         do {
@@ -37,7 +38,26 @@
         } while (contadorRainha <= casasRainha);
 
 
+         // Movimento do Cavalo
         
-    return 0;
+        printf("\nMovimento do Cavalo:\n");
 
+         int movimentosBaixo = 2;    // Duas casas para baixo
+        int movimentosEsquerda = 1; // Uma casa para esquerda
+
+         // Loop externo: cada passo para baixo
+         for (int i = 0; i < movimentosBaixo; i++) {
+        printf("Baixo\n");
+
+        // Loop interno (do-while) executa apenas quando terminar as 2 casas para baixo
+        if (i == movimentosBaixo - 1) {
+            int j = 0;
+            do {
+                printf("Esquerda\n");
+                j++;
+            } while (j < movimentosEsquerda);
+        }
     }
+
+    return 0;
+}
